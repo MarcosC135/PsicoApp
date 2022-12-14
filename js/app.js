@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 function mostrarMenu(){
     hamburguesa.addEventListener('click',()=>{
         navegacion.classList.toggle('ocultar');
+
     });
 }
 
@@ -22,6 +23,7 @@ function cerrarMenu(){
             const seccion = document.querySelector(e.target.attributes.href.value);
             cambioSeccion(seccion);
             if(e.target.tagName === 'A'){
+                
                 navegacion.classList.add('ocultar');
             }
         });
@@ -36,5 +38,6 @@ function cambioSeccion(seccion){
 
 function fechaactual(){
     let fechahoy = new Date().getFullYear();
+
     fecha.textContent = fechahoy;
 }
